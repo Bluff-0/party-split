@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="dataslotNames">
+        <input type="text" name="" id="nameId" placeholder="Name" onkeyup="activateName(this)">
+        <button id="submitName" onclick="addName()" disabled>Add Name</button>
+        <textarea id="showNames" disabled></textarea>
+        <button id="submitAllName" onclick="submitAllName()">Finish Adding Names</button>
+    </section>
+
+    <section id="dataslotItems">
+        <input type="text" name="" id="itemId" placeholder="Item Name" onkeyup="">
+        <input type="number" name="" id="itemCostId" placeholder="Cost Price" onkeyup="activateItem(this)">
+        <div id="checkboxesSlot"></div>
+        <h2>Paid By</h2>
+        <div id="checkboxesSlotPayer"></div>
+        <button id="submitItem" onclick="addItem()" disabled>Add Item</button>
+        <table id="showItems" border=2>
+            <thead>
+                <tr>
+                    <td>Item Name</td>
+                    <td>Price</td>
+                    <td>Shared Bw</td>
+                </tr>
+            </thead>
+            <tbody id="populateItemData"></tbody>
+            <tfoot>
+                <tr>
+                    <td id="totalButton" onclick="calculateTotalSpent()">Generate Total</td>
+                    <td id="totalAmount" colspan=2></td>
+                </tr>
+            </tfoot>
+        </table>
+        <button id="submitAllItems" onclick="mapObject()">Finish Adding Items</button>
+    </section>
+
+    <section id="showMasterSplit">
+        <table border=4>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Have to Pay</td>
+                    <td>Has Paid</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="populateShareData"></tbody>
+            <tfoot><tr><td colspan="3" id="includeDetailData"></td></tr></tfoot>
+        </table>
+
+        <button id="completeSession" onclick="window.location.reload(false)">Complete</button>
+    </section>
+
+</body>
+<script src="app.js"></script>
+</html>

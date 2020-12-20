@@ -1,0 +1,111 @@
+#dataslotNames, #dataslotItems, #showMasterSplit {
+    width: 50%;
+    margin: auto;
+}
+@media only screen and (max-width:1280px) {
+    #dataslotNames, #dataslotItems, #showMasterSplit {
+        width: 75%;
+    }
+}
+@media only screen and (max-width:768px) {
+    #dataslotNames, #dataslotItems, #showMasterSplit {
+        width: 95%;
+    }
+}
+
+#dataslotNames > * {
+    width: 100%;
+    margin: 2vh auto;
+}
+#nameId, #itemId, #itemCostId {
+    line-height: 26px;
+    font-size: large;
+}
+#submitName, #submitItem {
+    height: 4vh;
+    font-size: large;
+}
+#showNames {
+    min-height: 30vh;
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 1.3rem;
+}
+#submitAllName {
+    height: 4vh;
+    font-size: large;
+}
+
+
+
+#dataslotItems {
+    display: none;
+}
+#dataslotItems > * {
+    width: 100%;
+    margin: 2vh auto;
+}
+#checkboxesSlot {
+    min-height: 8vh;
+    font-size: large;
+}
+#showItems {
+    border-radius: 5px;
+}
+#showItems thead {
+    font-size: x-large;
+    font-weight: 600;
+}
+#showItems tbody {
+    font-size: large;
+}
+#showItems tfoot {
+    font-size: x-large;
+    font-weight: 600;
+    cursor: pointer;
+}
+#totalButton {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 0 8px 0 8px;
+}
+#submitAllItems {
+    height: 4vh;
+    font-size: large;
+}
+#totalAmount {
+    text-align: right;
+}
+
+#showMasterSplit {
+    display: none;
+}
+#showMasterSplit > * {
+    width: 100%;
+    margin: 2vh auto;
+}
+#showMasterSplit thead {
+    font-size: x-large;
+    font-weight: 600;
+}
+#showMasterSplit tbody {
+    font-size: large;
+}
+#showMasterSplit td {
+    padding: .5vh .5vw;
+}
+#populateShareData tr td:last-child {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0 5px 0 5px;
+    cursor: pointer;
+}
+#includeDetailData {
+    border-width: 2px;
+    border-radius: 12px 0 12px 0;
+    font-size: medium;
+}
+#completeSession {
+    height: 4vh;
+    font-size: large;
+}
