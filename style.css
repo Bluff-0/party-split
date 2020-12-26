@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*, html {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-image: url('./Images/body.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.headText {
+    text-align: center;
+    font-weight: 600;
+    padding: 2vh 2vw;
+    background-color: rgb(255, 215, 213, 0.9);
+    border-radius: 12px 12px 0 0;
+    width: 50%;
+    margin: auto auto;
+}
 #dataslotNames, #dataslotItems, #showMasterSplit {
     width: 50%;
     margin: auto;
@@ -6,11 +24,13 @@
     #dataslotNames, #dataslotItems, #showMasterSplit {
         width: 75%;
     }
+    .headText { width: 75%; }
 }
 @media only screen and (max-width:768px) {
     #dataslotNames, #dataslotItems, #showMasterSplit {
         width: 95%;
     }
+    .headText { width: 95%; }
 }
 
 #dataslotNames > * {
@@ -18,12 +38,30 @@
     margin: 2vh auto;
 }
 #nameId, #itemId, #itemCostId {
-    line-height: 26px;
+    line-height: 30px;
     font-size: large;
+    border-radius: 0 12px 0 12px;
+    outline: none;
+    border-width: 2px;
+    border-style: inset;
+    background-color: rgba(102, 137, 161, 0.9);
+    color: #eee;
+}
+::placeholder {
+    color: #eee;
+}
+#submitName:disabled, #submitItem:disabled {
+    opacity: 1;
+    filter: grayscale(1);
 }
 #submitName, #submitItem {
-    height: 4vh;
+    line-height: 30px;
     font-size: large;
+    color: #000;
+    border: 2px solid rgba(102, 137, 161);
+    background-color: rgba(232, 215, 255, 0.9);
+    border-radius: 8px;
+    font-weight: 600;
 }
 #showNames {
     min-height: 30vh;
@@ -32,8 +70,13 @@
     font-size: 1.3rem;
 }
 #submitAllName {
-    height: 4vh;
+    line-height: 30px;
     font-size: large;
+    color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
+    border: 3px solid rgb(180, 255, 159);
+    background-color: rgba(243, 255, 225, 0.9);
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
 }
 
 
@@ -45,22 +88,28 @@
     width: 100%;
     margin: 2vh auto;
 }
+.selectorSlot {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: .5vh 2vw 1em 2vw;
+    width: 97% !important;
+    border-radius: 8px;
+}
 #checkboxesSlot {
-    min-height: 8vh;
     font-size: large;
 }
 #showItems {
     border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 #showItems thead {
-    font-size: x-large;
+    font-size: medium;
     font-weight: 600;
 }
 #showItems tbody {
-    font-size: large;
+    font-size: medium;
 }
 #showItems tfoot {
-    font-size: x-large;
+    font-size: large;
     font-weight: 600;
     cursor: pointer;
 }
@@ -70,8 +119,13 @@
     border-radius: 0 8px 0 8px;
 }
 #submitAllItems {
-    height: 4vh;
+    line-height: 30px;
     font-size: large;
+    color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
+    border: 3px solid rgb(180, 255, 159);
+    background-color: rgba(243, 255, 225, 0.9);
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
 }
 #totalAmount {
     text-align: right;
@@ -83,13 +137,14 @@
 #showMasterSplit > * {
     width: 100%;
     margin: 2vh auto;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 #showMasterSplit thead {
-    font-size: x-large;
+    font-size: large;
     font-weight: 600;
 }
 #showMasterSplit tbody {
-    font-size: large;
+    font-size: medium;
 }
 #showMasterSplit td {
     padding: .5vh .5vw;
@@ -106,6 +161,11 @@
     font-size: medium;
 }
 #completeSession {
-    height: 4vh;
+    line-height: 30px;
     font-size: large;
+    color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
+    border: 3px solid rgb(180, 255, 159);
+    background-color: rgba(243, 255, 225, 0.9);
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
 }

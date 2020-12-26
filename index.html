@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Party Split</title>
 </head>
+
 <body>
+    <h2 class="headText">Party Split</h2>
     <section id="dataslotNames">
         <input type="text" name="" id="nameId" placeholder="Name" onkeyup="activateName(this)">
         <button id="submitName" onclick="addName()" disabled>Add Name</button>
@@ -17,9 +20,12 @@
     <section id="dataslotItems">
         <input type="text" name="" id="itemId" placeholder="Item Name" onkeyup="">
         <input type="number" name="" id="itemCostId" placeholder="Cost Price" onkeyup="activateItem(this)">
-        <div id="checkboxesSlot"></div>
-        <h2>Paid By</h2>
-        <div id="checkboxesSlotPayer"></div>
+        <div class="selectorSlot">
+            <h3>Shared Among</h3>
+            <div id="checkboxesSlot"></div>
+            <h3>Paid By</h3>
+            <div id="checkboxesSlotPayer"></div>
+        </div>
         <button id="submitItem" onclick="addItem()" disabled>Add Item</button>
         <table id="showItems" border=2>
             <thead>
@@ -51,7 +57,11 @@
                 </tr>
             </thead>
             <tbody id="populateShareData"></tbody>
-            <tfoot><tr><td colspan="3" id="includeDetailData"></td></tr></tfoot>
+            <tfoot>
+                <tr>
+                    <td colspan="4" id="includeDetailData"></td>
+                </tr>
+            </tfoot>
         </table>
 
         <button id="completeSession" onclick="window.location.reload(false)">Complete</button>
@@ -59,4 +69,5 @@
 
 </body>
 <script src="app.js"></script>
+
 </html>
